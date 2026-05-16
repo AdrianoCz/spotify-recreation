@@ -41,9 +41,6 @@ function Control({ song }) {
       if (seconds.length < 2) {
         seconds = "0" + seconds
       }
-      if (minutes.length < 2) {
-        minutes = "0" + minutes
-      }
       setCurrent(`${minutes}:${seconds}`)
     }
   }
@@ -60,7 +57,7 @@ function Control({ song }) {
   }
   const [playing, setPlay] = useState(false);
   const [volume, setVolume] = useState(50);
-  const [currentTime, setCurrent] = useState("00:00");
+  const [currentTime, setCurrent] = useState("0:00");
 
   return (
     <div id='control'>
